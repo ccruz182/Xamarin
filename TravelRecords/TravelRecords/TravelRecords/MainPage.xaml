@@ -3,15 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TravelRecords"
              x:Class="TravelRecords.MainPage">
+    <ContentPage.Resources>
+        
+    </ContentPage.Resources>
 
     <StackLayout VerticalOptions="Center" Margin="20, 0">
-        <Entry x:Name="emailEntry" Placeholder="Email address" Keyboard="Email"/>
+        <Entry x:Name="emailEntry" Placeholder="Email address" Keyboard="Email" TextColor="{StaticResource blueColor}"/>
         <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True" Margin="0,20,0,0"/>
         <Button x:Name="LoginButton"
             Text="Log in"
-            Clicked="LoginButton_Clicked"
-            BackgroundColor="Coral"
-            Margin="0,35,0,0"/>
+            Clicked="LoginButton_Clicked"            
+            Margin="0,35,0,0"
+            Style="{StaticResource NormalButton}"/>
         <Label x:Name="errorMsgLabel" TextColor="Red" FontAttributes="Bold" />
     </StackLayout>
 
